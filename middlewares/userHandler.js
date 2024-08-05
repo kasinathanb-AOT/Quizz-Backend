@@ -10,11 +10,12 @@ exports.verifySignupPayLoad = (req, res, next) => {
 };
 
 exports.verifyLoginPayload = (req, res, next) => {
-  const { username, password } = req.body;
-  if (username && password) {
-    next();
-  } else {
+  const { userName, password } = req.body;
+  console.log(userName, password);
+  if (!userName || !password) {
     return res.status(400).json({ message: "All fields are required" });
+  } else {
+    next();
   }
 };
 

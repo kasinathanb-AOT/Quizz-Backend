@@ -1,9 +1,11 @@
 const jwt = require("jsonwebtoken");
 let token = "";
 let secret = process.env.SECRET;
-
+const options = {
+  expiresIn: "10min",
+};
 exports.generateToken = (userData) => {
-  return (token = jwt.sign({ userData }, secret));
+  return (token = jwt.sign({ userData }, secret, options));
 };
 
 exports.verifyToken = (req, res, next) => {
@@ -16,6 +18,6 @@ exports.verifyToken = (req, res, next) => {
     req.userData = decode.userData;
     next();
   } catch (error) {
-    res.status(400).json({message:"Token is not valid"})
+    res.status(400).json({ message: "Token is not valid" });
   }
 };

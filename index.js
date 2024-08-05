@@ -9,6 +9,7 @@ const cors = require("cors");
 const corsOption = {
   origin: "*"
 }
+
 server.use(cors(corsOption));
 
 const userRouter = require("./Router/router");
