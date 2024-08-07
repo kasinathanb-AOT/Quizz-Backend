@@ -2,6 +2,7 @@ const User = require("../models/userModel");
 
 // Playload data verification
 exports.verifySignupPayLoad = (req, res, next) => {
+  console.log(req.body);
   const { username, email, password } = req.body;
   if (!username || !email || !password) {
     return res.status(400).json({ message: "All field are required..!" });
@@ -10,8 +11,8 @@ exports.verifySignupPayLoad = (req, res, next) => {
 };
 
 exports.verifyLoginPayload = (req, res, next) => {
+  console.log(req.body);
   const { userName, password } = req.body;
-  console.log(userName, password);
   if (!userName || !password) {
     return res.status(400).json({ message: "All fields are required" });
   } else {

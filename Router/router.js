@@ -2,13 +2,13 @@
 const express = require("express");
 const router = express.Router();
 const UserController = require("../controllers/userController");
+const { verifyToken } = require("../middlewares/jwtHandler");
 
 const {
   SignupHandler,
   verifySignupPayLoad,
   verifyLoginPayload,
 } = require("../middlewares/userHandler");
-const { verifyToken } = require("../middlewares/jwtHandler");
 
 // Router for signup
 router.post(
@@ -17,11 +17,11 @@ router.post(
   SignupHandler,
   UserController.userSignUp
 );
-// Router for login
-router.post(
-  "/login",
-  verifyLoginPayload,
-  UserController.userLogin
-);
+// Router for loginx
+router.post("/login", verifyLoginPayload, UserController.userLogin);
+
+
+// ROuter for getting all the users
+router.get("/show", UserController.getUsers);
 
 module.exports = router;

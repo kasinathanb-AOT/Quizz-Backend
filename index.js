@@ -1,28 +1,23 @@
 // index.js
 const express = require("express");
 const server = express();
+const cors = require("cors");
 const PORT = 5000;
 require("./db/connection");
-const cors = require("cors");
+const userRouter = require("./Router/router");
+const quizRouter = require("./Router/quizRouter");
 
-
-const corsOption = {
-  origin: "*"
-}
-
+// Enables cors from any origin
+const corsOption = { origin: "*" };
+server.use(express.urlencoded({ extended: false }));
+server.use(express.json());
 server.use(cors(corsOption));
 
-const userRouter = require("./Router/router");
-// const adminRouter = require("./routes/adminRouter");
-server.use(express.json());
-
+// Router for user
 server.use("/user", userRouter);
-// server.use("/admin", adminRouter);
-
-server.get("/", (req, res) => {
-  res.send("Welcome to the Quizz API");
-});
-
-server.listen(PORT, () => {
-  console.log(`Server Started on port ${PORT}`);
-});
+// Router for quiz
+server.use("/quiz", quizRouter);
+// Default API response
+server.get("/", (req, res) => res.send("Welcome to the Quizz API"));
+// Server listening
+server.listen(PORT, () => console.log(`Server Started on port ${PORT}`));
