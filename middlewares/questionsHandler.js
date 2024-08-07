@@ -1,7 +1,7 @@
 exports.verifyQuizPayload = (req, res, next) => {
   const { level, questions } = req.body;
 
-  if (!level || !["easy", "medium", "hard"].includes(level)) {
+  if (!level || !["easy", "moderate", "hard"].includes(level)) {
     return res.status(400).json({ message: "Invalid or missing quiz level." });
   }
 

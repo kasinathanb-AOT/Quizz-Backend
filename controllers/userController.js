@@ -51,6 +51,7 @@ exports.userLogin = async (req, res) => {
 // API for getting all the users
 exports.getUsers = (req, res) => {
   User.find()
+    .sort({ score: -1 })
     .then((users) => {
       if (users.length === 0) {
         return res.status(404).json({ message: "No users found in the table" });
@@ -61,5 +62,30 @@ exports.getUsers = (req, res) => {
       res
         .status(500)
         .json({ message: "Error fetching the users", error: error.message });
+    });
+};
+
+
+// Update the score of the user
+exports.updateScore = (req, res) => {
+  const { userName, score } = req.body;
+
+  User.findOne({ userName: userName })
+    .then((user) => {
+      if (user) {
+        user.score += score;
+        return user.save();
+      } else {
+        res.status(404).json({ error: "User not found" });
+        return Promise.reject();
+      }
+    })
+    .then(() => {
+      res.status(200).json({ message: "Score updated Successfully" });
+    })
+    .catch((error) => {
+      if (!res.headersSent) {
+        res.status(500).json({ error: "Error updating score" });
+      }
     });
 };

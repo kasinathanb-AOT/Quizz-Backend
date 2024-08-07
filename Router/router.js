@@ -19,8 +19,8 @@ router.post(
 );
 // Router for loginx
 router.post("/login", verifyLoginPayload, UserController.userLogin);
-
-
+// Router for updating the leader board
+router.put("/updateScore", UserController.updateScore);
 // ROuter for getting all the users
 router.get("/show", UserController.getUsers);
 

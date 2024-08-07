@@ -8,14 +8,12 @@ export const quiz = {
           question:
             "Which function is used to serialize an object into a JSON string in Javascript?",
           choices: ["stringify()", "parse()", "convert()", "None of the above"],
-          type: "MCQs",
           correctAnswer: "stringify()",
         },
         {
           question:
             "Which of the following keywords is used to define a variable in Javascript?",
           choices: ["var", "let", "var and let", "None of the above"],
-          type: "MCQs",
           correctAnswer: "var and let",
         },
         {
@@ -27,27 +25,23 @@ export const quiz = {
             "window.alert",
             "All of the above",
           ],
-          type: "MCQs",
           correctAnswer: "All of the above",
         },
         {
           question: "How can a datatype be declared to be a constant type?",
           choices: ["const", "var", "let", "constant"],
-          type: "MCQs",
           correctAnswer: "const",
         },
         {
           question:
             "What is the output of the following code: console.log(typeof null);",
           choices: ["null", "undefined", "object", "string"],
-          type: "MCQs",
           correctAnswer: "object",
         },
         {
           question:
             "Which method is used to add an element at the end of an array in Javascript?",
           choices: ["push()", "pop()", "shift()", "unshift()"],
-          type: "MCQs",
           correctAnswer: "push()",
         },
         {
@@ -58,14 +52,12 @@ export const quiz = {
             "Compares value only",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "Compares both value and type",
         },
         {
           question:
             "Which event occurs when the user clicks on an HTML element?",
           choices: ["onchange", "onclick", "onmouseclick", "onmouseover"],
-          type: "MCQs",
           correctAnswer: "onclick",
         },
         {
@@ -77,7 +69,6 @@ export const quiz = {
             "function:myFunction()",
             "function => myFunction()",
           ],
-          type: "MCQs",
           correctAnswer: "function myFunction()",
         },
         {
@@ -89,7 +80,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "Both of the above",
         },
         {
@@ -100,7 +90,6 @@ export const quiz = {
             "*This is a comment*",
             "#This is a comment",
           ],
-          type: "MCQs",
           correctAnswer: "//This is a comment",
         },
         {
@@ -111,7 +100,6 @@ export const quiz = {
             'var colors = ["red", "green", "blue"]',
             'var colors = "red", "green", "blue"',
           ],
-          type: "MCQs",
           correctAnswer: 'var colors = ["red", "green", "blue"]',
         },
         {
@@ -128,7 +116,6 @@ export const quiz = {
         {
           question: "JavaScript is the same as Java.",
           choices: ["True", "False"],
-          type: "MCQs",
           correctAnswer: "False",
         },
         {
@@ -139,7 +126,6 @@ export const quiz = {
             "v carName;",
             "carName = var;",
           ],
-          type: "MCQs",
           correctAnswer: "var carName;",
         },
       ],
@@ -152,7 +138,6 @@ export const quiz = {
           question:
             "Which method is used to remove the last element from an array in Javascript?",
           choices: ["pop()", "push()", "shift()", "unshift()"],
-          type: "MCQs",
           correctAnswer: "pop()",
         },
         {
@@ -163,7 +148,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "Both of the above",
         },
         {
@@ -175,7 +159,6 @@ export const quiz = {
             "== compares values and types, === compares values",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "== compares values, === compares values and types",
         },
         {
@@ -186,14 +169,12 @@ export const quiz = {
             "var obj = new Object();",
             "All of the above",
           ],
-          type: "MCQs",
           correctAnswer: "All of the above",
         },
         {
           question:
             "What will be the output of the following code: console.log(0.1 + 0.2 === 0.3);",
           choices: ["true", "false"],
-          type: "MCQs",
           correctAnswer: "false",
         },
         {
@@ -204,7 +185,6 @@ export const quiz = {
             "Creates a new array with all elements that pass the test implemented by the provided function",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer:
             "Creates a new array with the results of calling a provided function on every element in the calling array",
         },
@@ -216,7 +196,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "Both of the above",
         },
         {
@@ -228,7 +207,6 @@ export const quiz = {
             "Creates a new array with the results of calling a provided function on every element in the calling array",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer:
             "Executes a reducer function on each element of the array, resulting in a single output value",
         },
@@ -240,7 +218,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer:
             "A function having access to the parent scope, even after the parent function has closed",
         },
@@ -248,7 +225,6 @@ export const quiz = {
           question:
             'What will the following code output? console.log(1 + "1" - 1);',
           choices: ["11", "2", "10", "0"],
-          type: "MCQs",
           correctAnswer: "10",
         },
       ],
@@ -261,7 +237,6 @@ export const quiz = {
           question:
             "What will be the output of the following code: console.log([] + []);",
           choices: ['""', "[]", "undefined", "TypeError"],
-          type: "MCQs",
           correctAnswer: '""',
         },
         {
@@ -273,7 +248,6 @@ export const quiz = {
             "They help to avoid callback hell",
             "All of the above",
           ],
-          type: "MCQs",
           correctAnswer: "All of the above",
         },
         {
@@ -284,7 +258,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer:
             "It is used to call the constructor of the parent class",
         },
@@ -296,7 +269,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer:
             'Creates a new function that, when called, has its "this" keyword set to the provided value',
         },
@@ -311,7 +283,6 @@ export const quiz = {
           question:
             "Which method is used to merge two or more arrays in JavaScript?",
           choices: ["concat()", "merge()", "join()", "combine()"],
-          type: "MCQs",
           correctAnswer: "concat()",
         },
         {
@@ -323,7 +294,6 @@ export const quiz = {
             "Prevents existing properties, or their enumerability, configurability, or writability, from being changed",
             "All of the above",
           ],
-          type: "MCQs",
           correctAnswer: "All of the above",
         },
         {
@@ -335,7 +305,6 @@ export const quiz = {
             "Both of the above",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "Both of the above",
         },
         {
@@ -347,14 +316,12 @@ export const quiz = {
             "0.29999999999999993",
             "None of the above",
           ],
-          type: "MCQs",
           correctAnswer: "0.30000000000000004",
         },
         {
           question:
             "Which method is used to remove whitespace from the beginning and end of a string in JavaScript?",
           choices: ["trim()", "strip()", "cut()", "chop()"],
-          type: "MCQs",
           correctAnswer: "trim()",
         },
       ],
