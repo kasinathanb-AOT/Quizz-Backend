@@ -8,5 +8,4 @@ router.get("/questions/:level", QuizController.fetchQuiz);
 // Router for adding new questions
 router.post("/new", verifyQuizPayload, QuizController.addQuestion);
 
-
 module.exports = router;

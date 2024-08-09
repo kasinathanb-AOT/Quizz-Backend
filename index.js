@@ -6,6 +6,7 @@ const PORT = 5000;
 require("./db/connection");
 const userRouter = require("./Router/router");
 const quizRouter = require("./Router/quizRouter");
+const { verifyToken } = require("./middlewares/jwtHandler");
 
 // Enables cors from any origin
 const corsOption = { origin: "*" };
@@ -18,6 +19,8 @@ server.use("/user", userRouter);
 // Router for quiz
 server.use("/quiz", quizRouter);
 // Default API response
-server.get("/", (req, res) => res.send("Welcome to the Quizz API"));
+server.get("/", verifyToken, (req, res) =>
+  res.send("Welcome to the Quizz API")
+);
 // Server listening
 server.listen(PORT, () => console.log(`Server Started on port ${PORT}`));

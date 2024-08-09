@@ -8,6 +8,7 @@ const {
   SignupHandler,
   verifySignupPayLoad,
   verifyLoginPayload,
+  LoginHandler,
 } = require("../middlewares/userHandler");
 
 // Router for signup
@@ -18,7 +19,12 @@ router.post(
   UserController.userSignUp
 );
 // Router for loginx
-router.post("/login", verifyLoginPayload, UserController.userLogin);
+router.post(
+  "/login",
+  verifyLoginPayload,
+  LoginHandler,
+  UserController.userLogin
+);
 // Router for updating the leader board
 router.put("/updateScore", UserController.updateScore);
 // ROuter for getting all the users
