@@ -27,7 +27,7 @@ router.post(
 );
 // Router for updating the leader board
 router.put("/updateScore", UserController.updateScore);
-// ROuter for getting all the users
+// Router for getting all the users
 router.get("/show", UserController.getUsers);
 
 module.exports = router;
