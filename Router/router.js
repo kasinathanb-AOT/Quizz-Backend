@@ -25,8 +25,8 @@ router.post(
   LoginHandler,
   UserController.userLogin
 );
-// Router for updating the leader board
-router.put("/updateScore", UserController.updateScore);
+// Router for updating the score of the user
+router.put("/updateScore", verifyToken, UserController.updateScore);
 // Router for getting all the users
 router.get("/show", UserController.getUsers);
 

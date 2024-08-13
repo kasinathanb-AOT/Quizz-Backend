@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const server = express();
 const cors = require("cors");
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use Vercel's port or default to 5000
 require("./db/connection");
 const userRouter = require("./Router/router");
 const quizRouter = require("./Router/quizRouter");
